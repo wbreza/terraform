@@ -8,8 +8,6 @@ cd terraform
 
 Copy `backend.sample.tfvars` to `backend.tfvars` and replace with your resource group, storage account and container to store your remote terraform state.
 
-> The key names here are required based on the `azurerm` remote state provider
-
 ```terraform
 resource_group_name  = "<RESOURCE_GROUP_NAME>"
 storage_account_name = "<STORAGE_ACCOUNT_NAME>"
@@ -17,12 +15,17 @@ container_name       = "<CONTAINER_NAME>"
 key                  = "terraform.tfstate"
 ```
 
+> The key names here are required based on the `azurerm` remote state provider
+
+
 Copy `variables.sample.tfvars` to `variables.tfvars` and replace with your settings.
 
 ```
-BUSINESS_UNIT = "contoso"
-APP_NAME = "processing"
+BUSINESS_UNIT = "az"
+APP_NAME = "tf"
 ```
+
+> It is recommended to use short names since these abbreviations will be used as part of the naming conventions on your deployed resources
 
 Ensure your are logged in to Azure via the CLI
 
