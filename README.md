@@ -8,6 +8,8 @@ cd terraform
 
 Copy `backend.sample.tfvars` to `backend.tfvars` and replace with your resource group, storage account and container to store your remote terraform state.
 
+> The key names here are required based on the `azurerm` remote state provider
+
 ```terraform
 resource_group_name  = "<RESOURCE_GROUP_NAME>"
 storage_account_name = "<STORAGE_ACCOUNT_NAME>"
