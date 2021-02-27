@@ -1,6 +1,6 @@
 locals {
   // Region Resource Prefixes
-  region_resource_prefix           = "${var.BUSINESS_UNIT}-${var.APP_NAME}-${terraform.workspace}-${var.REGION}"
+  region_resource_prefix           = "${var.BUSINESS_UNIT}-${var.APP_NAME}-${terraform.workspace}"
   region_resource_prefix_condensed = replace(local.region_resource_prefix, "-", "")
 
   // Global Resource Prefixes
@@ -10,7 +10,6 @@ locals {
   tags = {
       "appName" = var.APP_NAME
       "businessUnit" = var.BUSINESS_UNIT
-      "region" = var.REGION
       "env" = terraform.workspace
   }
 }
