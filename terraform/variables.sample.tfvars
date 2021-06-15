@@ -1,2 +1,2 @@
 BUSINESS_UNIT = "contoso"
-APP_NAME = "processing"
+APP_NAME      = "processing"
